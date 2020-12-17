@@ -8,6 +8,9 @@ export const dimensions = {
 export const colors = {
   backgroundBlue: '#ADD8E6',
   textGrey: '#404C52',
+  displayWhite: '#FFFFFF',
+  navBlue: '#397DA4',
+  buttonBlue: '#E0F5FB'
 };
 
 export const fonts = {

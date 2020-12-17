@@ -2,8 +2,10 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import HomeScreen from '../screens/HomeScreen';
-import InfoScreen from '../screens/InfoScreen';
+import InfoStack from '../navigation/InfoStack';
 import EndScreen from '../screens/EndScreen';
+
+import { colors } from '../styles/GlobalStyles';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,15 +14,15 @@ const BottomTabs = () => {
         <Tab.Navigator
             initialRouteName="HomeScreen"
             tabBarOptions={{
-                inactiveBackgroundColor: '#397DA4',
+                inactiveBackgroundColor: colors.navBlue,
                 activeBackgroundColor: 'white',
                 inactiveTintColor: 'white',
-                activeTintColor: '#185C83',
-                labelStyle: { fontSize: 13 },
+                activeTintColor: colors.navBlue,
+                labelStyle: { fontSize: 16, marginBottom: 5 },
             }}
         >
             <Tab.Screen name="Home" component={HomeScreen} />
-            <Tab.Screen name="Info" component={InfoScreen} />
+            <Tab.Screen name="Info" component={InfoStack} />
             <Tab.Screen name="Final" component={EndScreen} />
         </Tab.Navigator>
     );
